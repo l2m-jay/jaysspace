@@ -448,7 +448,7 @@ header {
 .scroll_seciton_button {
     position: absolute;
     left: 50%;
-    bottom: 5%;
+    bottom: 6%;
     transform: translate(-50%, -5%);
     z-index: 20;
 }
@@ -477,10 +477,12 @@ header {
 .scroll_seciton_wrap {
     height: 100%;
     margin: 0;
+    margin-bottom: 150px;
+    /* border: 1px solid red; */
 }
 
 .scroll_seciton {
-    height: 280vh;
+    height: 100%;
     overflow-x: hidden;
     position: relative;
     /* 더보기 버튼 기준 position: relative;  */
@@ -490,7 +492,7 @@ header {
     position: relative;
     width: 100%;
     max-width: 1320px;
-    height: 660px;
+    height: 650px;
     margin: 0 auto;
     /* aspect-ratio: 16/9; */
     overflow: hidden;
@@ -544,14 +546,15 @@ header {
 }
 
 .sec4_title>h1 {
-    font-size: 30px;
+    font-size: 39px !important;
     font-weight: 600;
     color: #5B5B5B;
 }
 
 .sec04_grid {
+    border: 1px solid red;
     width: 100%;
-    height: 610px;
+    height: 610px !important;
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -648,8 +651,8 @@ footer {
 }
 
 footer a {
-  color: #5B5B5B !important;
-  text-decoration: none !important;
+    color: #5B5B5B !important;
+    text-decoration: none !important;
 }
 
 .foot_wrap {
@@ -758,7 +761,7 @@ footer a {
         align-items: center;
         justify-content: space-between;
         /* border: 1px solid red; */
-        
+
 
     }
 
@@ -793,6 +796,7 @@ footer a {
         width: 23px;
         height: 23px;
     }
+
     .header_icon_1 img {
         width: 100%;
         height: 100%;
@@ -1036,9 +1040,24 @@ footer a {
         margin-bottom: 70px;
     }
 
+
+
+
+    /*  */
+    /* scroll_seciton_wrap */
+    /*  */
+
+    .scroll_seciton_wrap {
+        height: 100%;
+        margin: 0;
+        margin-bottom: 80px;
+        /* border: 1px solid red; */
+    }
+
+
     .scroll_seciton {
         width: 100%;
-        height: 285vh;
+        height: auto;
     }
 
     .scroll_seciton_button {
@@ -1053,61 +1072,80 @@ footer a {
     }
 
 
-    /*  */
-    /* section04 */
-    /*  */
+    /* 스크롤 이미지 크기 */
+    .comparisonSection {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
 
-    .section04 {
-        /* border: 1px solid red; */
-    }
-    .sec4_title>h1 {
-        font-size: 26px;
-        margin-bottom: -15px;
-    }
 
-    .sec04_grid {
-        width: 100%;
-        box-sizing: border-box;
-        height: 300px;
-        display: grid;
-        grid-template-rows: 55% 45%;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            'b b c'
-            'e d c';
-        border: 1px solid #8E8E8E;
-        overflow: hidden;
-    }
 
-    .grid01 {
-        display: none;
-    }
 
-    .grid00 p {
-        font-size: 14px;
-        word-break: keep-all;
-        text-decoration: none;
-    }
+/*  */
+/* section04 */
+/*  */
 
-    .foot_wrap {
-        padding: 30px 13px;
-    }
+.section04 {
+    margin-top: 5px;
+    /* border: 1px solid red; */
+}
 
-    .foot_wrap>ul>li {
-        font-size: 11px;
-        color: #5B5B5B;
-        text-decoration: none;
-    }
+.sec4_title>h1 {
+    font-size: 26px !important;
+    margin-bottom: -15px;
+    text-align: center;
 
-    .floating-buttons {
-        display: none;
-    }
+}
 
-    .grid03 p {
-        margin-left: 5px;
-    }
+.sec04_grid {
+    width: 100%;
+    box-sizing: border-box;
+    height: 300px !important;
+    display: grid;
+    grid-template-rows: 55% 45%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'b b c'
+        'e d c';
+    border: 1px solid #8E8E8E;
+    overflow: hidden;
+}
 
-    /* .floating-buttons {
+.grid01 {
+    display: none;
+}
+
+.grid00 p {
+    font-size: 14px;
+    word-break: keep-all;
+    text-decoration: none;
+}
+
+
+/*  */
+/* footer */
+/*  */
+
+.foot_wrap {
+    padding: 30px 13px;
+}
+
+.foot_wrap>ul>li {
+    font-size: 11px;
+    color: #5B5B5B;
+    text-decoration: none;
+}
+
+.floating-buttons {
+    display: none;
+}
+
+.grid03 p {
+    margin-left: 5px;
+}
+
+/* .floating-buttons {
 
     right: 10px;
     bottom: 30px;
@@ -1122,4 +1160,7 @@ footer a {
     height: 18px;
 } */
 
-}
+
+
+
+

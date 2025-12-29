@@ -521,10 +521,9 @@
                             gsap.timeline({
                                 scrollTrigger: {
                                     trigger: section,
-                                    start: "center center",
-                                    end: "+=200%",       // ✅ 여기! 원래 "+=" + section.offsetWidth → "+=200%" 로 변경
+                                    start: "top 30% ",
+                                    end: "+=25%",       // ✅ 여기! 원래 "+=" + section.offsetWidth → "+=200%" 로 변경
                                     scrub: true,
-                                    pin: true,
                                     anticipatePin: 1,
                                     markers: false       // 확인용
                                 },
@@ -613,6 +612,4 @@
     </script>
 </body>
 
-
 </html>
-
