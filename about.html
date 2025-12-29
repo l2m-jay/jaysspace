@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT DIPTYQUE</title>
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="icon" href="svg/pavicon.svg">
+
+
+    <!-- 구글 폰트 열결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+</head>
+
+<body>
+    <header>
+        <div class="m_menu">
+            <div class="hamburger2">
+                <img src="svg/menu.svg" alt="메뉴" class="hamburger-img2">
+            </div>
+            <nav class="header_nav2">
+                <ul>
+                    <li><a href="all.html">ALL</a></li>
+                    <li>
+                        <a href="#">FRAGRANCES</a>
+                        <div class="submenu2">
+                            <ul>
+                                <li class="menu-title">COLLECTIONS</li>
+                                <li>Exclusive perfumes</li>
+                                <li>Eaux de parfum</li>
+                                <li>Eaux de toilette</li>
+                                <li>Solid perfumes</li>
+                                <li class="menu-title menu-title2">CATEGORIES</li>
+                                <li><a href="Philosykos.html">Philosykos</a></li>
+                                <li><a href="fleurdepeau.html">Fleur De Peau</a></li>
+                                <li><a href="">Eau des Sens</a></li>
+                                <li><a href="">Doson</a></li>
+                                <li><a href="">L'Eau Papier</a></li>
+                                <li><a href="">Orphéon</a></li>
+                                <li><a href="">Tam Dao</a></li>
+                            </ul>
+
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">BATH & BODY</a>
+                        <div class="submenu2">
+                            <ul>
+                                <li class="menu-title">BATH & SHOWER</li>
+                                <li>Body & Hand Wash</li>
+                                <li>Shower Gel & Oil</li>
+                                <li>Soap</li>
+                                <li>Hair Care</li>
+                                <li>Care Collection</li>
+                                <li class="menu-title menu-title2">BODY & FACE</li>
+                                <li>Body Cream</li>
+                                <li>Body & Hand Lotion</li>
+                                <li>Body Mist</li>
+                                <li>Hand Cream</li>
+                                <li>Hair Mist</li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">HOME FRAGRANCE</a>
+                        <div class="submenu2">
+                            <ul>
+                                <li class="menu-title">SCENTED CANDLES</li>
+                                <li>Classic candles</li>
+                                <li>Large candles</li>
+                                <li>Small candles</li>
+                                <li>Exclusive candles</li>
+                                <li>Accessories</li>
+                                <li>Reed diffusers</li>
+                                <li class="menu-title  menu-title2">DIFFUSER & SPRAY</li>
+                                <li>Car diffusers</li>
+                                <li>Electric diffusers</li>
+                                <li>Eau des Sens</li>
+                                <li>Sprays</li>
+                                <li>Refills</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">GIFTS</a>
+                        <div class="submenu2">
+                            <ul>
+                                <li class="menu-title">LIMITED EDITION</li>
+                                <li>Holiday collection</li>
+                                <li>Personalised Engraving</li>
+                                <li>Sets to compose</li>
+                                <li>Little Treasures</li>
+                                <li class="menu-title menu-title2">SELECT A GIFT</li>
+                                <li>Best sellers</li>
+                                <li>Decoration</li>
+                                <li>Gift Sets</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="about.html">ABOUT DIPTYQUE</a></li>
+                </ul>
+            </nav>
+
+            <script>
+                const hamburger2 = document.querySelector('.hamburger2');
+                const nav2 = document.querySelector('.header_nav2');
+                const hamburgerImg2 = document.querySelector('.hamburger-img2');
+
+                hamburger2.addEventListener('click', () => {
+                    nav2.classList.toggle('active');
+
+                    // 햄버거 이미지 → X 이미지 전환
+                    if (nav2.classList.contains('active')) {
+                        hamburgerImg2.src = 'svg/x.svg'; // 메뉴 열림 시 X 버튼
+                    } else {
+                        hamburgerImg2.src = 'svg/menu.svg'; // 메뉴 닫힘 시 햄버거 버튼
+                    }
+                });
+
+                // 서브메뉴 토글
+                const menuItems2 = document.querySelectorAll('.header_nav2 > ul > li > a');
+
+                menuItems2.forEach(item => {
+                    item.addEventListener('click', function (e) {
+                        const submenu = this.nextElementSibling;
+                        if (submenu && submenu.classList.contains('submenu2')) {
+                            e.preventDefault();
+                            submenu.classList.toggle('active');
+                        }
+                    });
+                });
+            </script>
+
+
+
+        </div>
+        <div class="logo_container">
+            <div class="search">
+                <input type="text">
+                <button class="search_button"><img src="svg/search.svg" alt=""></button>
+            </div>
+            <div class="logo_img"><a href="index.html"><img src="svg/LOGO3_대문자.svg" alt=""></a></div>
+            <div class="header_icon">
+                <div class="header_icon_1"><img src="svg/user.svg" alt=""></div>
+                <div class="header_icon_1 icon_heart"><img src="svg/heart.svg" alt=""></div>
+                <div class="header_icon_1"><img src="svg/shopping.svg" alt=""></div>
+            </div>
+
+        </div>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="all.html">ALL</a></li>
+                <li><a href="">FRAGRANCES</a>
+                    <div class="submenu">
+                        <div class="menu3_between">
+                            <div class="menu3_flex">
+                                <div class="menu3">COLLECTIONS
+                                    <ul>
+                                        <li>Exclusive perfumes</li>
+                                        <li>Eaux de parfum</li>
+                                        <li>Eaux de toilette</li>
+                                        <li>Solid perfumes</li>
+                                    </ul>
+                                </div>
+                                <div class="menu3">CATEGORIES
+                                    <ul>
+                                        <li><a href="Philosykos.html">Philosykos</a></li>
+                                        <li><a href="fleurdepeau.html">Fleur De Peau</a></li>
+                                        <li><a href="">Orphéon</a></li>
+                                        <li><a href="">Eau des Sens</a></li>
+                                        <li><a href="">Doson</a></li>
+                                        <li><a href="">L'Eau Papier</a></li>
+                                        <li><a href="">Tam Dao</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="img00 img01"><img src="img/img001.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="">BATH & BODY</a>
+                    <div class="submenu">
+                        <div class="menu3_between">
+                            <div class="menu3_flex">
+                                <div class="menu3">BATH & SHOWER
+                                    <ul>
+                                        <li>Body & Hand Wash</li>
+                                        <li>Shower Gel & Oil</li>
+                                        <li>Soap</li>
+                                        <li>Hair Care</li>
+                                        <li>Care Collection</li>
+                                    </ul>
+                                </div>
+                                <div class="menu3">BODY & FACE
+                                    <ul>
+                                        <li>Body Cream</li>
+                                        <li>Body & Hand Lotion</li>
+                                        <li>Body Mist</li>
+                                        <li>Hand Cream</li>
+                                        <li>Hair Mist</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="img00 img02"><img src="img/img002.jpg" alt=""></div>
+                        </div>
+                    </div>
+
+                </li>
+                <li><a href="">HOME FRAGRANCE</a>
+                    <div class="submenu">
+                        <div class="menu3_between">
+                            <div class="menu3_flex">
+                                <div class="menu3">SCENTED CANDLES
+                                    <ul>
+                                        <li>Classic candles</li>
+                                        <li>Large candles</li>
+                                        <li>Small candles</li>
+                                        <li>Exclusive candles</li>
+                                        <li>Accessories</li>
+                                    </ul>
+                                </div>
+                                <div class="menu3">DIFFUSER & SPRAY
+                                    <ul>
+                                        <li>Reed diffusers</li>
+                                        <li>Car diffusers</li>
+                                        <li>Electric diffusers</li>
+                                        <li>Eau des Sens</li>
+                                        <li>Sprays</li>
+                                        <li>Refills</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="img00 img03"><img src="img/img003.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">GIFTS</a>
+                    <div class="submenu">
+                        <div class="menu3_between">
+                            <div class="menu3_flex">
+                                <div class="menu3">LIMITED EDITION
+                                    <ul>
+                                        <li>Holiday collection</li>
+                                        <li>Personalised Engraving</li>
+                                        <li>Sets to compose</li>
+                                        <li>Little Treasures</li>
+                                    </ul>
+                                </div>
+                                <div class="menu3">SELECT A GIFT
+                                    <ul>
+                                        <li>Best sellers</li>
+                                        <li>Decoration</li>
+                                        <li>Gift Sets</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="img00 img01"><img src="img/img_004.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about.html">ABOUT DIPTYQUE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <p>HOME > 어바웃딥디크 > 딥디크의 이야기</p>
+        </div>
+        <div class="section01">
+            <div class="sec1_img"><img src="img/about_banner.jpg" alt=""></div>
+            <h1>About Diptyque</h1>
+            <div class="sec1_text">
+                <h3>1960년대 파리의 예술, 지성, 축제의 중심지였던 보헤미안풍 생제르맹데프레에서,
+                    아름다움에 대한 공통된 감각, 자연에 대한 사랑, 그리고 끝없는 호기심으로 하나가
+                    된 세 명의 다방면 예술가가 만나 창의적인 모험의 시작을 알렸습니다. </h3>
+                <h3>딥티크는 꿈과 현실, 친밀함과 보편성을 연결하는 공간,
+                    상상력이 자유롭게 펼쳐지고 창의력이 샘솟는 특별한 세계로 향하는 문을 열어줍니다.</h3>
+            </div>
+        </div>
+        <div class="section02">
+            <div class="tab-container">
+                <!-- 버튼 -->
+                <div class="tab-buttons">
+                    <button data-tab="1">The Story of Diptyque</button>
+                    <button data-tab="2">34 boulevard Saint-Germain</button>
+                    <button data-tab="3">Diptyque’s codes</button>
+                </div>
+
+                <!-- 탭 내용 -->
+                <div class="tab-content">
+                    <div class="about01_1 active">
+                        <section class="section">
+                            <div class="about_img"><img src="img/about1_1.jpg" alt="" class="fade-image"></div>
+                            <div class="fade-text">
+                                <h2>The Story of Diptyque</h2>
+                                <h3>Diptyque의 이야기 ㅡ 자연, 여행, 예술에서 영감을 받은 세 친구의 모험 기록</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <h4>1961: 상상력의 불씨가 타오르다</h4>
+                                        <h5>세 명의 아티스트, 세 명의 자유로운 영혼, 그리고 하나의 비전. 1960년대 초, 현대적 감성과 낙관주의가 넘치던 시대에 데스먼드
+                                            녹스-리트, 크리스티안 몽타드르-고트로, 이브 쿠슬랑은 자신들의 개성이 담긴 새로운 공간을 탄생시켰습니다. 전 세계에서 모은 오브제와
+                                            창의성이 어우러진 이곳은 감각과 대담함의 조화를 보여주며, 아름다움과 자연, 호기심으로 연결된 세 친구의 비전을
+                                            담았습니다.<br><br>
+                                            그들의 아틀리에이자 호기심의 공간인 딥티크는 파리 5구 생제르맹 대로 34번지에 문을 열었습니다. 유산과 현대성이 공존하던 보헤미안의
+                                            중심에서 세 친구는 ‘사소한 것들의 수집가’로 불리며, 여행과 우연한 발견을 통해 이국적 오브제와 일상의 아름다움을 재해석했습니다.
+                                            그렇게 딥티크는 혁신적 콘셉트 스토어의 선구자로 자리 잡았습니다.
+                                        </h5>
+                                    </div>
+                                    <div class="fadetext_flex">
+                                        <h4>딥티크의 창립자들: 예술과 우정의 삼중주</h4>
+                                        <h5>이야기의 시작은 1949년 파리입니다. 화가 데스먼드는 파리 국립미술학교를, 인테리어 건축가 크리스티안은 장식미술학교를 졸업했습니다.
+                                            예술적 감각과 장인정신을 지닌 두 사람은 서로에게 영감을 주는 존재로, 프랑스 남부의 풍경과 어린 시절의 정원을 이야기하며 우정을
+                                            쌓았습니다. 함께 런던의 리버티와 샌더슨에 직물 디자인을 선보이며 세련된 감각을 인정받았습니다.<br>
+                                            <br>
+                                            10년 뒤, 인도차이나에서 자란 여행가 이브 쿠슬랑을 만나면서 세 사람은 깊은 유대감을 형성했습니다. 예술과 안목으로 연결된 그들은
+                                            자신들만의 메종(Maison)을 세우겠다는 공동의 꿈을 품게 되었습니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section section_m">
+                            <div class="fade-text fade-text_m">
+                                <h2>Driven by passion, imagination, and true integrity</h2>
+                                <h3>열정과 상상력, 그리고 진정한 성실함이 이끄는</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <h4>새로운 삶의 예술의 서명</h4>
+                                        <h5>1963년, 세 명의 예술가는 향초의 새로운 영역을 개척하며 메종의 시그니처 중 하나를 창조했습니다. 이전에는 순전히 실용적인
+                                            아이템이었던 향초는 그들의 손길을 거쳐 장식적이고 감각적인 오브제로 탈바꿈했습니다. 이제 거실을 떠나지 않고도 여행을 떠나 집에 독특한
+                                            개성을 더할 수 있게 되었습니다. 가장 단순한 제스처만으로도 이 세련되고 창의적인 오브제는 보편적인 개성을 갖추게 되었고, 새로운 생활
+                                            예술의 아이콘으로 자리매김했습니다.<br>
+                                            <br>
+                                            오베핀(호손), 카넬(계피), 테(차)는 자연의 감각, 즉 향신료, 꽃, 잎이 어우러진 후각적 풍경에서 영감을 받아 만들어진 최초의
+                                            향료집입니다. 이 독창적인 과정은 마치 화가가 팔레트를 준비하는 것처럼 원료를 혼합하여 향수를 만들어낸 데스몬드 녹스-리트가 남긴 유산의
+                                            일부입니다.<br>
+                                            <br>
+                                            5년 후, 딥티크는 첫 오 드 뚜왈렛을 출시하며 후각에 대한 탐구를 이어갔습니다. 로(L'Eau)는 계피, 장미, 정향, 제라늄,
+                                            샌달우드를 함유한 16세기 레시피에서 영감을 얻었는데, 이는 정향이 가득한 영국 전통 오렌지 '포만더'에서 영감을 받은 것입니다.
+                                            다른 어떤 장르와도 비교할 수 없는 L'Eau는 후각 예술 작품입니다. 오 드 뚜왈렛과 향수 컬렉션의 첫 번째 작품인 L'Eau는 머나먼
+                                            땅으로의 끝없는 여행을 약속하며, 현실이든 상상이든 기억의 은밀한 작용 속으로의 여정을 선사합니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about_img about_img_m"><img src="img/about1_2.jpg" alt="" class="fade-image">
+                            </div>
+                        </section>
+                        <section class="section">
+                            <div class="about_img"><img src="img/about1_3.jpg" alt="" class="fade-image"></div>
+                            <div class="fade-text">
+                                <h2>The fragrant line: An artistic adventure</h2>
+                                <h3>향기로운 선: 예술적 모험</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <h4>새로운 삶의 예술의 서명</h4>
+                                        <h5>코, 눈, 손이 만나는 감각적인 만남, 딥티크의 창작품은 독창적인 창조 철학의 결실입니다. 메종의 설립자들은 향수에서 영감을 얻어
+                                            이미지를 창조하거나, 이미지에서 향수를 창조했을지 모르지만, 항상 창의적인 자유라는 빛에 이끌렸습니다.
+                                            조향사와 일러스트레이터는 오늘날까지도 긴밀히 협력하며 작업하고 있습니다. 딥티크의 모든 향수는 메종의 상상력과 각자의 감성이 만나는만남을
+                                            기념하는 공동 작업입니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section section_m">
+                            <div class="fade-text fade-text_m">
+                                <h2>Diptyque’s inspirations</h2>
+                                <h3>자연·여행·예술의 열정으로 탄생한 감성과 진정성</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <h4>NATURE</h4>
+                                        <h5>딥티크는 자연, 진정성, 그리고 진실에 대한 공통된 열정에 뿌리를 두고 있습니다. 거칠고 생동감 넘치며 다채로운 자연은 창립자 세 명이
+                                            첫 향을 창조하는 데 큰 힘이 되었습니다. 에센스와 소재로 가득한 자연은 세 친구가 치유의 힘으로 소중히 여겼던 풍경을 떠올리게 합니다.
+                                        </h5>
+                                    </div>
+                                    <div class="fadetext_flex">
+                                        <h4>GRAPHIC ARTS</h4>
+                                        <h5>그래픽 아트에 대한 공통된 열정을 바탕으로 세 사람은 유쾌하고 섬세한 새로운 언어를 창조했습니다. 그래픽 디자인은 이제 표현의 매개체이자
+                                            딥티크의 세계로 향하는 관문이 되었습니다. 메종의 창립자들은 이미지와 단어, 흑백과 색상, 모티프와 구상적 드로잉 사이에서 예술적인
+                                            균형을 이루고자 했습니다. 타원형, 향기 버너, 그리고 마치 수수께끼처럼 춤추는 글자들로 이루어진 상징적인 시각적 코드는 메종의 정체성을
+                                            이루는 핵심 요소가 되었습니다.
+                                        </h5>
+                                    </div>
+                                    <div class="fadetext_flex">
+                                        <h4>TRAVEL</h4>
+                                        <h5>여행은 그들의 시야를 넓혀주었습니다. 유럽에서 아시아로, 베니스에서 모스크바로, 고대 그리스인들의 발자취를 따라 꿈같은 여정을 떠나는
+                                            그들의 여정은 그들을 이끌었습니다. 여행에 대한 열정과 머나먼 땅에 대한 매혹은 그들에게 훗날 향수와 그림으로 표현될 추억을
+                                            선사했습니다. 이러한 추억은 메종에 가장 큰 영감의 원천입니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about_img about_img_m"><img src="img/about1_4.jpg" alt="" class="fade-image">
+                            </div>
+                        </section>
+                    </div>
+                    <div class="about01_2">
+                        <section class="section">
+                            <div class="about_img"><img src="img/about2_1.jpg" alt="" class="fade-image"></div>
+                            <div class="fade-text">
+                                <h2>34 boulevard Saint-Germain</h2>
+                                <h3>생제르맹 34번가는 역사와 시적 감성이 깃든 라탱지구의 상징</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <h4>아름다움의 수도, 보헤미안 파리</h4>
+                                        <h5>세느강변에 자리한 상징적인 동네, 파리 5구는 딥티크가 추구하는 삶의 예술을 보여주는 곳입니다. 아름다움의 대명사이자 수세기의 역사를
+                                            간직하고, 탁월한 장인정신이 살아 있는 이 파리지앵 지구에 매장을 연 것은 세 명의 창립자가 자신의 이상을 실현하기 위한
+                                            선택이었습니다.<br><br>이곳의 매력은 원재료처럼, 그 가치를 알아볼 만큼 호기심 많은 이들에게만 드러납니다. 고대 로마 시대의
+                                            루테시아 원형극장부터 시테 섬, 그리고 갤러리 주인들과 장인들이 터를 잡은 거리까지 — 모든 것이 깊은 역사에 뿌리를 두고
+                                            있습니다.<br><br>언제나 지식과 탐구의 정신을 길러온 이 지역은 서점가와 그랑제콜, 소르본, 아르데코 예술학교에 이르기까지 학문과
+                                            예술의 중심지였습니다. 해가 저문 뒤에도 이곳은 영화관, 카페, 재즈 클럽, 카바레의 불빛 아래 새벽까지 활기를 이어갑니다.한편, 자르댕
+                                            데 플랑트(파리 식물원)는 자연의 세계를 온전히 찬미하는 곳입니다. 향기로운 식물 도감처럼, 이곳은 이국적인 온실과 그늘진 산책로를 따라
+                                            걷는 즐거움을 선사합니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section section_m">
+                            <div class="fade-text fade-text_m">
+                                <h2>A Sensory Journey at 34 Boulevard Saint-Germain</h2>
+                                <h3>생제르맹 34번가, 감각의 여정</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <h4>새로운 삶의 예술의 서명</h4>
+                                        <h5>생제르맹 대로 34번지는 방문객들의 호기심을 자극하고, 미식가적인 삶의 예술을 함께 나누도록 초대하며 감각을 자극했습니다. 부티크에
+                                            들어서는 순간, 상상의 세계로 통하는 문을 여는 듯했습니다. 이곳에서 감각은 끊임없이 자극받았습니다. 한눈에도 수많은 놀라운 발견,
+                                            흥미로운 형태의 오브제, 그리고 촉각을 통해서만 온전히 느낄 수 있는 섬세한 소재에 매료되었습니다.<br><br>방문객들은 메종이 프랑스
+                                            최초로 출시한 영국 조향사들의 매혹적인 향수병과 창립 3인조가 직접 만든 향초, 오 드 뚜왈렛에 매료되었습니다. 롤링 스톤스부터
+                                            몬테베르디까지, 감동적인 멜로디가 축음기에서 흘러나왔습니다.<br><br>3인조의 다채로운 음악적 취향은 공간에 독특한 사운드스케이프를
+                                            선사하며 독특한 분위기를 더했습니다. 1966년, 딥티크는 음악적 감각이 부족했던 미국 가수 플로렌스 포스터 젠킨스의 독점적인 불협화음
+                                            녹음을 새롭고 독창적인 사운드로 연주하기도 했습니다. 이 모든 공통된 열정은 보고, 만지고, 듣고, 느끼고, 느낄 수 있는
+                                            공간이었습니다.방문객들에게는 마치 시간을 초월한 막간, 시적 여정의 출발점과 같았습니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about_img about_img_m"><img src="img/about2_2.jpg" alt="" class="fade-image">
+                            </div>
+                        </section>
+                        <section class="section">
+                            <div class="about_img"><img src="img/about2_3.jpg" alt="" class=" fade-image"></div>
+                            <div class="fade-text">
+                                <h2>The Art of Living à la Diptyque</h2>
+                                <h3>딥티크식 삶의 예술, 그 본질</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <h4>“Marchands de rien”: 시대 이전의 컨셉 스토어</h4>
+                                        <h5>생제르맹 대로 34번지에 있는 부티크 작업실에서 세 명의 창립자는 뛰어난 변형, 혁신, 그리고 수집 기술을 선보이며 "사소한 것의
+                                            공급자"라는 별명을 얻었습니다. 이 새로운 직업은 앙리 고와 크리스티앙 미요가 1964년에 펴낸 파리 가이드북에 기록되었는데, 이는
+                                            앙시앵 레짐(Ancien Régime)의 잡화상들을 기리는 의미였습니다.<br><br>
+                                            디드로는 이들을 백과사전에서 "모든 것을 팔지만 아무것도 만들지 않는 상인"이라고 묘사하며, 동양에서 가져온 직물과 예술품을 자유롭게
+                                            재가공하고 조립하고 변형했다고 묘사했습니다. 다면적인 공간인 생제르맹 대로 34번지는 홈 데코 부티크이자, 예술가의 작업실이자, 골동품
+                                            상점이 어우러진 곳으로, 파리를 비롯한 세계 각지의 예술과 디자인 애호가들에게 필수 코스로 자리 잡았습니다.<br><br>
+                                            방문객들은 영국 종이, 일본 연, 독일 등불로 만든 폴록 극장과 그 옆에 놓인 나무 조각상, 가방, 쿠션, 향, 포푸리, 그리고
+                                            형형색색의 씨앗이 담긴 붕규산 실험실 병들이 어우러진 화려한 광경을 감상했습니다. 다음에 어떤 보물을 발견하게 될지 전혀 알 수 없는 이
+                                            특별한 은신처는 세 친구가 공유했던 풍부한 영향을 반영했습니다. "컨셉 스토어"는 아직 존재하지 않았지만, 막 발명된 상태였습니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="about01_3">
+                        <section class="section">
+                            <div class="about_img"><img src="img/about3_1.jpg" alt="" class="fade-image"></div>
+                            <div class="fade-text">
+                                <h2>Diptyque’s codes</h2>
+                                <h3>날로 풍요로워지는 유산, 살아있는 언어에 대한 이야기</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <h4>"딥티크"라는 이름</h4>
+                                        <h5>속삭이듯 부드러운 두 음절의 이름, 딥티크(Diptyque)는 상상력을 자극하며 먼 해안의 풍경을 떠올리게 합니다. 창립자들은 르네상스
+                                            시대의 두 패널 그림(Diptych)에서 영감을 받아, 서로 대화하듯 조화를 이루는 예술적 감성을 브랜드의 정체성에 담았습니다.그리스
+                                            문명에 뿌리를 둔 어원은 창립자들의 미적 감각과 진정성 있는 세계관을 반영합니다. 그림 속 주제들이 서로 조화를 이루며 대화를 나누듯,
+                                            메종 또한 예술과 향이 어우러지는 조화로운 균형을 추구합니다.<br><br>두 개의 창문이 직각을 이루며 항상 서로에게 영향을 주는 파리
+                                            생제르맹 대로 34번지의 부티크는 딥티크의 정신을 상징합니다. 그곳에서 장인 정신에 대한 열정과 향의 덧없음이 공존하며, 흑과 백은
+                                            색채와 어우러져 새로운 아름다움을 만들어냅니다. 같은 병의 양면을 감싸는 시그니처 타원은 메종의 창의성이 완전한 자유 속에서 표현되는
+                                            프레임이자, 딥티크의 정수를 담은 상징입니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section section_m">
+                            <div class="fade-text fade-text_m">
+                                <h2>The artistic symbolism of Diptyque’s oval emblem</h2>
+                                <h3>딥티크의 상징인 타원형의 예술적 의미와 상징성</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <h4>The oval; 타원형</h4>
+                                        <h5>이 감각적이고 독창적인 이름에 더해진 것은 ‘타원’이라는 형태입니다. 타원은 단순한 도형을 넘어 예술과 역사의 깊이 를 담고 있는
+                                            상징으로, 그 안에는 수천 년의 영향을 품고 있습니다. 고대 이집트의 파라오 문양인 카르투슈에서부터 바로크 시대의 건축물에서 볼 수 있는
+                                            우아한 타원형, 그리고 18세기 유럽의 섬세한 메달리온에 이르기까지, 다양한 문화와 시대의 미적 요소가 자연스럽게 만나고
+                                            있습니다.<br><br>타원은 단순한 장식이 아니라, 처음부터 창립자 세 사람을 하나로 묶고 그들의 창의적 자유를 가능하게 한 감각적
+                                            틀이었습니다. 그들은 이 타원을 자신들의 시그니처, 곧 딥티크만의 자연스러운 상징으로 바꾸어 놓았고, 이를 캔들, 향수, 상자, 그리고
+                                            일상 속의 다양한 물건들에 적용하며 브랜드의 정체성을 형성했습니다.<br><br>타원은 부드러움과 엄격함 사이에서 완벽한 균형을 이루고
+                                            있습니다. 그 독특한 형태는 무한한 가능성을 상상하게 하고, 글자 사이사이를 들여다보며, 마치 춤추는 듯한 캘리그래피의 글자들을 읽게
+                                            만듭니다. 타원의 아름다움은 단순히 형태적 장식이 아니라, 의미와 영향, 역사적 암시가 풍부한 세계로 향하는 문을 열어줍니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about_img about_img_m"><img src="img/about3_2.jpg" alt="" class="fade-image">
+                            </div>
+                        </section>
+                        <section class="section">
+                            <div class="about_img img_about3_3"><img src="img/about3_33.gif" alt="" class="fade-image">
+                            </div>
+                            <div class="fade-text">
+                                <h2>The fragrance burner</h2>
+                                <h3>향 버너의 상징성과 의미</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <!-- <h4>새로운 삶의 예술의 서명</h4> -->
+                                        <h5>타원형의 중심부에는 딥티크의 상징이 향기 버너 형태로 생생하게 살아납니다. 딥티크의 정체성과 불가분의 관계를 맺고 있는 이 상징적인
+                                            시그니처는 조향사이자 상상력을 불어넣는 장인이라는 창립자들의 새로운 소명을 반영합니다. 신비로운 형태는 고대 의식의 이미지를 떠올리게
+                                            합니다. 춤추는 불꽃의 빛 속에서 향기로운 향이 은은하게 퍼져 나와 공간을 매혹적인 분위기로 가득 채웁니다. 단순한 오브제를 넘어, 향수
+                                            버너는 딥티크의 유산을 구성하는 필수적인 요소이며, 그 상징성은 시대를 초월합니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="section section_m">
+                            <div class="fade-text fade-text_m">
+                                <h2>The Dancing Letters</h2>
+                                <h3>춤추는 글자들</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <!-- <h4>NATURE</h4> -->
+                                        <h5>딥티크에게 생동감 넘치는 영감의 원천인 캘리그램은 마치 무언의 발레처럼 중심 무대를 차지하며, 양초 라벨을 우아하게 밟으며 글자들이
+                                            생동감 있게 살아납니다. 무한한 다양성을 지닌 딥티크 알파벳은 우리에게 관찰과 사색을 불러일으킵니다. 각각의 모티브는 매번 새롭게 해석될
+                                            수 있습니다. 마치 유쾌한 시각 놀이처럼, 서로 얽힌 글자들의 구성은 종종 향 자체에서 영감을 받습니다. 우리의 환상을 깨우고 상상력을
+                                            자극하는 시적인 타이포그래피는 단어와 형태의 웅변적인 힘을 드러냅니다. 그것은 각 이름을 감각의 보편적인 언어로 큰 소리로 말하는
+                                            그림으로 변환합니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about_img about_img_m"><img src="img/about3_44.gif" alt="" class="fade-image">
+                            </div>
+                        </section>
+                        <section class="section">
+                            <div class="about_img"><img src="img/about3_5.gif" alt="" class="fade-image"></div>
+                            <div class="fade-text">
+                                <h2>The storytelling art of Diptyque drawings</h2>
+                                <h3>드로잉의 향기로운 이야기</h3>
+                                <div class="fadetext_flex_wrap">
+                                    <div class="fadetext_flex">
+                                        <!-- <h4>1961: 상상력의 불씨가 타오르다</h4> -->
+                                        <h5>딥티크의 드로잉은 향기의 여정으로 우리를 이끄는 이야기꾼과 같습니다. 딥티크는 각 향기에 맞는 진정한 후각적 풍경을 만들어냅니다. 모든
+                                            향에는 그에 어울리는 드로잉이 있고, 모든 드로잉에는 그에 어울리는 향이 있습니다. 이 둘은 함께 이야기를 들려줍니다. 이러한 전통은
+                                            창립자들로부터 이어져 온 메종만의 독특한 특징으로, 그들은 자신의 기억과 감각을 파노라마 일러스트레이션으로 생생히 표현했습니다.
+                                            <br><br> 그들은 타원형 슬라이더로 이 매혹적인 파노라마의 한 부분을 선택해 향수 병 라벨의 앞뒤에 있는 그림의 모든 요소가 향기의
+                                            이야기를 전하도록 했습니다. 이 정지된 여행은 그리스 신화에서 아르 누보, 오리엔탈리즘, 열대의 정글에서 지중해 과수원까지 시대와
+                                            스타일의 경계를 넘나듭니다.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <script>
+                        const sections = document.querySelectorAll('.section');
+
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('visible');
+                                } else {
+                                    entry.target.classList.remove('visible');
+                                }
+                            });
+                        }, {
+                            threshold: 0.4 // 화면 절반쯤 들어오면 인식
+                        });
+
+                        sections.forEach(section => observer.observe(section));
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!-- section2 탭박스 -->
+        <script>
+            const buttons = document.querySelectorAll('.tab-buttons button');
+            const tabs = document.querySelectorAll('.tab-content > div');
+            const tabButtons = document.querySelector('.tab-buttons');
+
+            // 탭 활성화 함수: doScroll이 true일 때만 스크롤 실행
+            function activateTab(tabId, doScroll = true) {
+                // 버튼 활성화 클래스
+                buttons.forEach(btn => btn.classList.remove('active'));
+                const clickedBtn = Array.from(buttons).find(b => b.getAttribute('data-tab') === tabId);
+                if (clickedBtn) clickedBtn.classList.add('active');
+
+                // 탭 내용 토글
+                tabs.forEach(tab => tab.classList.remove('active'));
+                const target = document.querySelector(`.about01_${tabId}`);
+                if (target) target.classList.add('active');
+
+                if (!doScroll || !target) return;
+
+                // 스티키 높이(탭 버튼 높이)를 자동으로 구함
+                const stickyHeight = tabButtons.getBoundingClientRect().height || 0;
+
+                // 문서 기준(target의 top 위치) 계산
+                const targetTop = target.getBoundingClientRect().top + window.pageYOffset;
+
+                // 스크롤 위치: targetTop - stickyHeight (탭 버튼이 가리는 부분 보정)
+                window.scrollTo({
+                    top: Math.max(0, Math.floor(targetTop - stickyHeight)),
+                    //   behavior: 'smooth'
+                });
+            }
+
+            // 버튼에 클릭 이벤트 연결 (클릭할 때만 스크롤)
+            buttons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const tabId = button.getAttribute('data-tab');
+                    activateTab(tabId, true);
+                });
+            }); D
+            // 초기 탭 설정 (페이지 로드 시 자동 활성화 — 스크롤하지 않음)
+            if (buttons.length > 0) {
+                const firstTabId = buttons[0].getAttribute('data-tab');
+                activateTab(firstTabId, false);
+            }
+        </script>
+    </div>
+
+    <footer>
+        <div class="foot_wrap">
+            <ul>
+                <li>주소: 서울특별시 강남구 도산대로 449 (청담동) | 대표이사 : 아무개 </li>
+                <li>사업자등록번호 : 201-81-53657 | 통신판매업 신고번호 : 강남-13797</li>
+                <li>개인정보보호책임자 : 아무개 | 호스팅사업자 : 아무개 | 고객센터(유료) : 1234-0606 | 이메일 : jays_space@sikorea.co.kr</li>
+                <li>일부 상품의 경우 (주)신세계인터내셔날은 통신판매의 당사자가 아닌 통신판매중개자로서, 입점 판매사가 등록한 상품 정보 및 거래에 대해 책임을 지지 않습니다.
+                </li>
+                <li>© 2022 SHINSEGAE INTERNATIONAL ALL RIGHTS RESERVED</li>
+                <li>
+                    <div class="footer_icon">
+                        <div class="icon"><a href="https://www.instagram.com/diptyque/"><img src="svg/인스타그램.svg"
+                                    alt=""></a></div>
+                        <div class="icon"><a href="https://www.youtube.com/@DiptyqueParis"><img src="svg/유튜브.svg"
+                                    alt=""></a></div>
+                        <div class="icon"><a href=""><img src="svg/페이스북.svg" alt=""></a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- 플로팅 버튼 영역 -->
+    <div class="floating-buttons">
+        <div class="floating_banner"><a href=""><img src="img/floating_banner.png" alt=""></a></div>
+        <button id="topBtn"><img src="svg/top.svg" alt=""></button>
+        <button id="msgBtn"><img src="svg/chat.svg" alt=""></button>
+    </div>
+
+    <script>
+        // Top 버튼 클릭 시 상단으로 이동
+        document.getElementById('topBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosykos</title>
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="icon" href="svg/pavicon.svg">
+
+    <!-- 구글 폰트 열결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="m_menu">
+            <div class="hamburger2">
+                <img src="svg/menu.svg" alt="메뉴" class="hamburger-img2">
+            </div>
+            <nav class="header_nav2">
+                <ul>
+                    <li><a href="all.html">ALL</a></li>
+                    <li>
+                        <a href="#">FRAGRANCES</a>
+                        <div class="submenu2">
+                            <ul>
+                                <li class="menu-title">COLLECTIONS</li>
+                                <li>Exclusive perfumes</li>
+                                <li>Eaux de parfum</li>
+                                <li>Eaux de toilette</li>
+                                <li>Solid perfumes</li>
+                                <li class="menu-title menu-title2">CATEGORIES</li>
+                                <li><a href="Philosykos.html">Philosykos</a></li>
+                                <li><a href="fleurdepeau.html">Fleur De Peau</a></li>
+                                <li><a href="">Eau des Sens</a></li>
+                                <li><a href="">Doson</a></li>
+                                <li><a href="">L'Eau Papier</a></li>
+                                <li><a href="">Orphéon</a></li>
+                                <li><a href="">Tam Dao</a></li>
+                            </ul>
+
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">BATH & BODY</a>
+                        <div class="submenu2">
+                            <ul>
+                                <li class="menu-title">BATH & SHOWER</li>
+                                <li>Body & Hand Wash</li>
+                                <li>Shower Gel & Oil</li>
+                                <li>Soap</li>
+                                <li>Hair Care</li>
+                                <li>Care Collection</li>
+                                <li class="menu-title menu-title2">BODY & FACE</li>
+                                <li>Body Cream</li>
+                                <li>Body & Hand Lotion</li>
+                                <li>Body Mist</li>
+                                <li>Hand Cream</li>
+                                <li>Hair Mist</li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">HOME FRAGRANCE</a>
+                        <div class="submenu2">
+                            <ul>
+                                <li class="menu-title">SCENTED CANDLES</li>
+                                <li>Classic candles</li>
+                                <li>Large candles</li>
+                                <li>Small candles</li>
+                                <li>Exclusive candles</li>
+                                <li>Accessories</li>
+                                <li>Reed diffusers</li>
+                                <li class="menu-title  menu-title2">DIFFUSER & SPRAY</li>
+                                <li>Car diffusers</li>
+                                <li>Electric diffusers</li>
+                                <li>Eau des Sens</li>
+                                <li>Sprays</li>
+                                <li>Refills</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">GIFTS</a>
+                        <div class="submenu2">
+                            <ul>
+                                <li class="menu-title">LIMITED EDITION</li>
+                                <li>Holiday collection</li>
+                                <li>Personalised Engraving</li>
+                                <li>Sets to compose</li>
+                                <li>Little Treasures</li>
+                                <li class="menu-title menu-title2">SELECT A GIFT</li>
+                                <li>Best sellers</li>
+                                <li>Decoration</li>
+                                <li>Gift Sets</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="about.html">ABOUT DIPTYQUE</a></li>
+                </ul>
+            </nav>
+
+            <script>
+                const hamburger2 = document.querySelector('.hamburger2');
+                const nav2 = document.querySelector('.header_nav2');
+                const hamburgerImg2 = document.querySelector('.hamburger-img2');
+
+                hamburger2.addEventListener('click', () => {
+                    nav2.classList.toggle('active');
+
+                    // 햄버거 이미지 → X 이미지 전환
+                    if (nav2.classList.contains('active')) {
+                        hamburgerImg2.src = 'svg/x.svg'; // 메뉴 열림 시 X 버튼
+                    } else {
+                        hamburgerImg2.src = 'svg/menu.svg'; // 메뉴 닫힘 시 햄버거 버튼
+                    }
+                });
+
+                // 서브메뉴 토글
+                const menuItems2 = document.querySelectorAll('.header_nav2 > ul > li > a');
+
+                menuItems2.forEach(item => {
+                    item.addEventListener('click', function (e) {
+                        const submenu = this.nextElementSibling;
+                        if (submenu && submenu.classList.contains('submenu2')) {
+                            e.preventDefault();
+                            submenu.classList.toggle('active');
+                        }
+                    });
+                });
+            </script>
+
+
+
+        </div>
+        <div class="logo_container">
+            <div class="search">
+                <input type="text">
+                <button class="search_button"><img src="svg/search.svg" alt=""></button>
+            </div>
+            <div class="logo_img"><a href="index.html"><img src="svg/LOGO3_대문자.svg" alt=""></a></div>
+            <div class="header_icon">
+                <div class="header_icon_1"><img src="svg/user.svg" alt=""></div>
+                <div class="header_icon_1 icon_heart"><img src="svg/heart.svg" alt=""></div>
+                <div class="header_icon_1"><img src="svg/shopping.svg" alt=""></div>
+            </div>
+
+        </div>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="all.html">ALL</a></li>
+                <li><a href="">FRAGRANCES</a>
+                    <div class="submenu">
+                        <div class="menu3_between">
+                            <div class="menu3_flex">
+                                <div class="menu3">COLLECTIONS
+                                    <ul>
+                                        <li>Exclusive perfumes</li>
+                                        <li>Eaux de parfum</li>
+                                        <li>Eaux de toilette</li>
+                                        <li>Solid perfumes</li>
+                                    </ul>
+                                </div>
+                                <div class="menu3">CATEGORIES
+                                    <ul>
+                                        <li><a href="Philosykos.html">Philosykos</a></li>
+                                        <li><a href="fleurdepeau.html">Fleur De Peau</a></li>
+                                        <li><a href="">Orphéon</a></li>
+                                        <li><a href="">Eau des Sens</a></li>
+                                        <li><a href="">Doson</a></li>
+                                        <li><a href="">L'Eau Papier</a></li>
+                                        <li><a href="">Tam Dao</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="img00 img01"><img src="img/img001.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="">BATH & BODY</a>
+                    <div class="submenu">
+                        <div class="menu3_between">
+                            <div class="menu3_flex">
+                                <div class="menu3">BATH & SHOWER
+                                    <ul>
+                                        <li>Body & Hand Wash</li>
+                                        <li>Shower Gel & Oil</li>
+                                        <li>Soap</li>
+                                        <li>Hair Care</li>
+                                        <li>Care Collection</li>
+                                    </ul>
+                                </div>
+                                <div class="menu3">BODY & FACE
+                                    <ul>
+                                        <li>Body Cream</li>
+                                        <li>Body & Hand Lotion</li>
+                                        <li>Body Mist</li>
+                                        <li>Hand Cream</li>
+                                        <li>Hair Mist</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="img00 img02"><img src="img/img002.jpg" alt=""></div>
+                        </div>
+                    </div>
+
+                </li>
+                <li><a href="">HOME FRAGRANCE</a>
+                    <div class="submenu">
+                        <div class="menu3_between">
+                            <div class="menu3_flex">
+                                <div class="menu3">SCENTED CANDLES
+                                    <ul>
+                                        <li>Classic candles</li>
+                                        <li>Large candles</li>
+                                        <li>Small candles</li>
+                                        <li>Exclusive candles</li>
+                                        <li>Accessories</li>
+                                    </ul>
+                                </div>
+                                <div class="menu3">DIFFUSER & SPRAY
+                                    <ul>
+                                        <li>Reed diffusers</li>
+                                        <li>Car diffusers</li>
+                                        <li>Electric diffusers</li>
+                                        <li>Eau des Sens</li>
+                                        <li>Sprays</li>
+                                        <li>Refills</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="img00 img03"><img src="img/img003.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">GIFTS</a>
+                    <div class="submenu">
+                        <div class="menu3_between">
+                            <div class="menu3_flex">
+                                <div class="menu3">LIMITED EDITION
+                                    <ul>
+                                        <li>Holiday collection</li>
+                                        <li>Personalised Engraving</li>
+                                        <li>Sets to compose</li>
+                                        <li>Little Treasures</li>
+                                    </ul>
+                                </div>
+                                <div class="menu3">SELECT A GIFT
+                                    <ul>
+                                        <li>Best sellers</li>
+                                        <li>Decoration</li>
+                                        <li>Gift Sets</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="img00 img01"><img src="img/img_004.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about.html">ABOUT DIPTYQUE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <p>HOME > ALL</p>
+        </div>
+        <!-- <div class="section01">
+            <div class="sec1_img"><img src="img/Philosykos.jpg" alt=""></div>
+            <h1>The Collection Philosykos</h1>
+            <div class="sec1_text">
+                <h3>햇살이 내리쬐는 야생의 숲, 바다에 닿기 위해 지나야 했던 그 길.
+                    Diptyque의 Philosykos 컬렉션은 그리스 펠리온 산에서 보낸 여름의 기억을 담고 있습니다.
+                    향기로운 산책이자, 무화과나무 전체에 바치는 찬사입니다 </h3>
+            </div>
+        </div> -->
+        <div class="section01_1">
+            <div class="section01_1_wrap">
+                <h3>전체상품 <p class="all_number">225</p>
+                </h3>
+                <select id="sort" name="sort" class="custom-select">
+                    <option value="recommend">인기상품순</option>
+                    <option value="new">신상품순</option>
+                    <option value="review">리뷰많은순</option>
+                    <option value="low_price">낮은가격순</option>
+                    <option value="high_price">높은가격순</option>
+                    <option value="high_discount">높은할인순</option>
+                    <option value="like">좋아요많은순</option>
+                </select>
+            </div>
+        </div>
+        <div class="section02">
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos01.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos11.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos02.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos22.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos03.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos33.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos04.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos44.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="section02">
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos04.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos44.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos05.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos55.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos06.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos66.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos07.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos77.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="section02">
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos01.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos11.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos02.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos22.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos03.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos33.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos04.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos44.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="section02">
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos04.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos44.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos05.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos55.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos06.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos66.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+            <div class="s1_product">
+                <div class="img_overlay">
+                    <img src="p_img/Philosykos07.jpg" alt="" class="img_o">
+                    <img src="p_img/Philosykos77.jpg" alt="" class="img_x">
+                </div>
+                <h2>오 드 퍼퓸 필로시코스</h2>
+                <h3>Philosykos eau de parfum</h3>
+                <h4>75ml ₩ 274,550</h4>
+                <button>장바구니 담기</button>
+                <div class="heart_icon"><img src="svg/heart2.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="section04">
+            <nav class="pagination" aria-label="Page navigation">
+                <ul>
+                    <li class="prev"><a href="#" aria-label="Previous page">&lt;</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="ellipsis">…</li>
+                    <li><a href="#">16</a></li>
+                    <li class="next"><a href="#" aria-label="Next page">&gt;</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="foot_wrap">
+            <ul>
+                <li>주소: 서울특별시 강남구 도산대로 449 (청담동) | 대표이사 : 아무개 </li>
+                <li>사업자등록번호 : 201-81-53657 | 통신판매업 신고번호 : 강남-13797</li>
+                <li>개인정보보호책임자 : 아무개 | 호스팅사업자 : 아무개 | 고객센터(유료) : 1234-0606 | 이메일 : jays_space@sikorea.co.kr</li>
+                <li>일부 상품의 경우 (주)신세계인터내셔날은 통신판매의 당사자가 아닌 통신판매중개자로서, 입점 판매사가 등록한 상품 정보 및 거래에 대해 책임을 지지 않습니다.
+                </li>
+                <li>© 2022 SHINSEGAE INTERNATIONAL ALL RIGHTS RESERVED</li>
+                <li>
+                    <div class="footer_icon">
+                        <div class="icon"><a href="https://www.instagram.com/diptyque/"><img src="svg/인스타그램.svg"
+                                    alt=""></a></div>
+                        <div class="icon"><a href="https://www.youtube.com/@DiptyqueParis"><img src="svg/유튜브.svg"
+                                    alt=""></a></div>
+                        <div class="icon"><a href=""><img src="svg/페이스북.svg" alt=""></a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- 플로팅 버튼 영역 -->
+    <div class="floating-buttons">
+        <div class="floating_banner"><a href=""><img src="img/floating_banner.png" alt=""></a></div>
+        <button id="topBtn"><img src="svg/top.svg" alt=""></button>
+        <button id="msgBtn"><img src="svg/chat.svg" alt=""></button>
+    </div>
+
+    <script>
+        // Top 버튼 클릭 시 상단으로 이동
+        document.getElementById('topBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    </script>
+</body>
+
+</html>
