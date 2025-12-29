@@ -647,6 +647,11 @@ footer {
     color: #5a5a5a;
 }
 
+footer li a {
+  color: inherit !important;
+  
+}
+
 .foot_wrap {
     max-width: 1320px;
     padding: 30px 20px;
