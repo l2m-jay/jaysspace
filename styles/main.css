@@ -661,6 +661,8 @@ footer {
     font-size: 13px;
     font-weight: 300;
     padding: 3px;
+    color: #5B5B5B;
+    text-decoration: none;
 }
 
 .foot_wrap>ul>li:nth-child(5) {
@@ -1088,6 +1090,8 @@ footer {
 
     .foot_wrap>ul>li {
         font-size: 11px;
+        color: #5B5B5B;
+        text-decoration: none;
     }
 
     .floating-buttons {
