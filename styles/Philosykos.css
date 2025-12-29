@@ -516,7 +516,6 @@ header {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
-
 }
 
 .sec03_video_img>video {
@@ -537,6 +536,12 @@ footer {
     background-color: #f9f9f9;
     font-family: "Noto Sans KR";
     color: #5a5a5a;
+}
+
+
+footer a {
+  color: #5B5B5B !important;
+  text-decoration: none !important;
 }
 
 .foot_wrap {

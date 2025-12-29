@@ -549,6 +549,11 @@ footer {
     color: #5a5a5a;
 }
 
+footer a {
+  color: #5B5B5B !important;
+  text-decoration: none !important;
+}
+
 .foot_wrap {
     max-width: 1320px;
     margin: 0 auto;
